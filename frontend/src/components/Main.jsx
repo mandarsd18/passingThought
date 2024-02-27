@@ -15,7 +15,7 @@ const Main = () => {
   const addThoughts = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/api/thoughts", {
+      .post("https://passingthought-backend.onrender.com/api/thoughts", {
         title: title,
         author: author,
         desc: desc,
@@ -42,7 +42,7 @@ const Main = () => {
 
   const updateThoughts=(e)=>{
     e.preventDefault();
-    axios.patch(`http://localhost:4000/api/thoughts/${updateId}`,{
+    axios.patch(`https://passingthought-backend.onrender.com/api/thoughts/${updateId}`,{
       title:title,
       author:author,
       desc:desc 
@@ -59,7 +59,7 @@ const Main = () => {
   
  useEffect(() => {
    axios
-      .get("http://localhost:4000/api/thoughts")
+      .get("https://passingthought-backend.onrender.com/api/thoughts")
       .then((res) => setThoght(res.data));
   }, [uiUpdate]);
   return (

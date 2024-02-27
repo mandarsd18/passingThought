@@ -9,7 +9,7 @@ import {Link} from "react-router-dom"
 const List = ({id,title,desc,author,updatedAt,setUiUpdate,updateMode}) => {
 
   const deleteThoughts=()=>{
-    axios.delete(`http://localhost:4000/api/thoughts/${id}`).then((res)=>{
+    axios.delete(`https://passingthought-backend.onrender.com/api/thoughts/${id}`).then((res)=>{
       console.log(res);
       setUiUpdate((prevState)=>!prevState);
     })

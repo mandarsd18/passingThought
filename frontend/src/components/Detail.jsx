@@ -13,7 +13,7 @@ const Detail = () => {
   const{title,author,desc,updatedAt}=post
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/api/thoughts/${id}`)
+      .get(`https://passingthought-backend.onrender.com/api/thoughts/${id}`)
       .then((res) => setPost(res?.data))
       .catch((err) => setError(err));
   });
