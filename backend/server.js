@@ -15,8 +15,8 @@ app.use('/api/thoughts',thoughtRoutes)
 mongoose.connect('mongodb://127.0.0.1:27017/passingThoughts')
 .then(()=>{
     console.log("connected to the database")
-    app.listen(4000,()=>{
-        console.log(`listening on port 4000`);
+    app.listen(process.env.PORT,()=>{
+        console.log(`listening on port ${process.env.PORT}`);
     })
 }).catch((err)=>{
     console.log("unable to connect " ,err)
