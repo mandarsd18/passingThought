@@ -12,7 +12,7 @@ app.use((req,res,next)=>{next()})
 
 app.use('/api/thoughts',thoughtRoutes)
 
-mongoose.connect('mongodb://127.0.0.1:27017/passingThoughts')
+mongoose.connect(`mongodb+srv://mandardeshmukh1811:mongodb@cluster0.dvb8rto.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
 .then(()=>{
     console.log("connected to the database")
     app.listen(process.env.PORT,()=>{
